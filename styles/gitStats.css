@@ -1,0 +1,61 @@
+
+#stats_heading {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+#stats_heading  h3{
+    font-size: 3rem;
+    font-weight: 800;
+ }
+
+#git-stats {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    padding: 10px 10%;
+}
+#git-stats>div:nth-child(2) {
+    margin-top: 60px;
+}
+#top_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats_card>img {
+    width: 100%;
+    margin: auto;
+}
+#top_row div {
+    padding: 10px 1%;
+}
+
+#git-stats-calender>img {
+    height: 20vh;
+    width: 100%;
+    margin: auto;
+}
+@media only screen and (max-width:1140px) {
+    #top_row {
+        flex-direction: column;
+    }
+    #git-stats>div:nth-child(3) {
+        margin-top: 10px;
+        padding: 10px 0%;
+    }
+    #git-stats-calender>img {
+        height: 15vh;
+    }
+} 
+@media only screen and (max-width:479px) {
+    #top_row {
+        flex-direction: column;
+    }
+}

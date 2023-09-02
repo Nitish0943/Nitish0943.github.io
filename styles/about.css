@@ -1,0 +1,114 @@
+
+#About_cont{
+    padding: 10px 10%;
+}
+#about {
+    width: 100%;
+    padding: 10px 10%;
+    margin: 10vh 0;
+}
+.about_heading {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_heading div h3 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#about>div:nth-child(2) {
+    display: flex;
+    padding: 7% 0;
+    
+}
+
+#about>div:nth-child(2)>div:nth-child(2) {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    margin-left: 80px;
+}
+#Profile_image {
+    display: flex;
+    width: 280px;
+    height: 280px;
+    align-items: center;
+    justify-content: center;
+}
+
+#Profile_image>img {
+    width: 100%;
+    object-fit: scale-down;
+    border-radius: 50px;
+}
+
+#user-detail-about {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    word-spacing: 0.1rem;
+    font-weight: 650;
+    word-wrap:normal;
+    color: var(--clr-fg);
+    
+}
+#about_intrests {
+    padding-top: 20px;
+}
+#about_intrests h3{
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+
+#about_intrests ul li span{
+    font-size: 1.5rem;
+    font-weight: 650;
+}
+
+@media only screen and (max-width:1140px) {
+    #home {
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #about>div:nth-child(2) {
+        flex-direction: column;
+    }
+    #Profile_image {
+        margin: 10vh;
+    }
+    
+}
+@media only screen and (max-width:479px) {
+    #about div:nth-child(3) ul li{
+        width: 120%;
+        padding: 10px 5%;
+    }
+    #about>div:nth-child(2)>div:nth-child(2) {
+        width: 100%;
+        margin: auto;
+        text-align: left;
+    }
+    #about>div:nth-child(2) {
+        flex-direction: column;
+    }
+    #user-detail-about {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+        word-spacing: 0.1rem;
+        font-weight: 650;
+        word-wrap:normal;
+        color: var(--clr-fg);
+        
+    }
+    #Profile_image {
+        width: 100%;
+        margin: 10vh 0;
+        padding-bottom: 5%;
+    }
+}

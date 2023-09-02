@@ -1,0 +1,223 @@
+
+/* <------------------------------------light------------------------------------>  */
+:root .light-mode {
+    --clr-bg: rgb(252, 252, 252);
+    --clr-bg-alt: #cdcdff;
+    --clr-fg: rgb(85, 85, 85);
+    --clr-fg-alt: rgb(59, 59, 59);
+    --clr-primary: rgb(78, 159, 222);
+    --shadow: rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px;
+    transition: all 0.9s linear;
+  }
+
+/* <-----------------------------------dark------------------------------------> */
+:root {
+    --clr-bg: #23283e;
+    --clr-bg-alt: #2a2f4c;
+    --clr-fg: #bdbddd;
+    --clr-fg-alt: #cdcdff;
+    --clr-primary: #90a0d9;
+    --shadow: rgba(0,0,0,0.16) 0px 10px 36px 0px,rgba(0,0,0,0.06) 0px 0px 0px 1px;
+    transition: all 0.9s linear;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 115px;
+}
+html {
+    font-size: 80%;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-fg);
+}
+ul,li {
+    list-style: none;
+}
+body {
+    background: var(--clr-bg);
+    color: var(--clr-fg-alt);
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-font-feature-smotthing: antialiased;
+    position: relative;
+}
+/* -----------------Home---------------- */
+#container {
+    padding: 10px 10%;
+}
+#home {
+    display: flex;
+    justify-content: center;
+    scroll-padding-top: 200px;
+    text-align: center;
+    margin: auto;
+}
+#user-detail-name {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+.different {
+    color: var(--clr-primary);
+}
+.header-text {
+    margin-top: 14%;
+    font-size: 6rem;
+}
+
+/* ----------------Name_Type_Writtr--------------------- */
+#role_style {
+    text-align: center;
+    color:var(--clr-fg-alt);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 2% 10%;
+}
+#role_style a {
+    color: var(--clr-fg-alt);
+    font-weight: 700;
+}
+/* ----------------Name_Type_Writtr--------------------- */
+#container>div:nth-child(2) {
+    margin: auto;
+    padding: 4% 15%;
+    text-align: center;
+}
+#user-detail-intro {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    word-spacing: 0.1rem;
+    font-weight: 650;
+    word-wrap:normal;
+    color: var(--clr-fg);
+}
+
+#home-contact {padding: 2% 3%;}
+#home-contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#home-contact ul li{
+   padding: 0% 10px;
+}
+.contact_icons {
+    height: 26px;
+    fill: var(--clr-fg);
+    padding: 3% 4px;
+}
+.contact_icons:hover{
+    fill: var(--clr-primary);
+}
+#home-contact ul li a {
+    font-size: 18px;
+    position: relative;
+}
+#home-contact ul li a:hover {
+    fill: var(--clr-primary);
+}
+#home-contact ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: var(--clr-primary);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    box-shadow: var(--shadow);
+}
+#home-contact ul li a:hover::after {
+    width: 100%;
+}
+
+.resume_button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 130px;
+    height: 50px;
+    margin: auto;
+    background: var(--clr-bg);
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+}
+.resume_button::after {
+    content: '';
+    width: 0%;
+    height: 50px;
+    background: var(--clr-primary);
+    position:absolute;
+    left: 0;
+    transition: 0.5s;
+    box-shadow: var(--shadow);
+    z-index: -1;
+    border-radius: 25px;
+}
+.resume_button:hover::after {
+    width: 100%;
+}
+.resume_button a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.resume_button a:hover {
+    color: var(--clr-fg-alt);
+}
+.resume_button:hover {
+    box-shadow: var(--shadow);
+    color: var(--clr-primary);
+}
+
+
+@media only screen and (max-width:1140px) {
+    #container>div:nth-child(2) {
+        padding: 7% 10%;
+    }
+    #user-detail-name {
+        margin-top: 10vh;
+        text-align: center;
+    }
+    .resume_button {
+        margin-top: 30px;
+    }
+   
+} 
+@media only screen and (max-width:479px) {
+   
+    /* #home {
+        scroll-padding-top: 600px;
+    } */
+    
+    #container>div:nth-child(2) {
+        padding: 8% 10%;
+    }
+    #user-detail-name {
+        text-align: start;
+        font-size: 3rem;
+        margin-top: 8vh;
+        margin-left: 30px;
+    }
+    #user-detail-intro {
+        text-align: start;
+    }
+    #home-contact {padding: 5% 3%;}
+
+    .resume_button {
+        margin-top: 20px;
+    }
+
+}
